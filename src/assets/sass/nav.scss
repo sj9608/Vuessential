@@ -1,0 +1,25 @@
+.navbar {
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.navbar-brand {
+    color: #3EAF7C !important;
+  }
+
+.nav-item {
+  border-radius: 5px !important;
+  margin-right: 6px;
+}
+
+.router-link-active {
+  border-bottom: 2px solid;
+  color: black !important;
+  border-bottom-color: #3eaf7c !important;
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid;
+    border-collapse: collapse;
+    border-bottom-color: #3EAF7C !important;
+}
