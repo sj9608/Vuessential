@@ -1,12 +1,12 @@
 <template>
   <div class="controller">
     <div class="select">
-      <label for="order">Order</label>
+      <label for="order">
+        <span class="blind">Order</span>
+      </label>
       <select name="order" id="order" class="selectbox">
-        <option value="date-asc">Date Ascending</option>
-        <option value="date-desc">Date Descending</option>
-        <option value="name-asc">Name Ascending</option>
-        <option value="name-desc">Name Descending</option>
+        <option value="date-oldest">Oldest</option>
+        <option value="date-latest">Latest</option>
       </select>
     </div>
     <button class="clear">Clear All</button>
@@ -17,6 +17,12 @@ export default {
     
 }
 </script>
-<style>
-    
+<style lang="scss">
+.controller {
+  max-width: $max-width;
+  margin: 0 auto;
+  @include flexbox();
+  @include align-items(center);
+  @include justify-content(space-between);
+}
 </style>
