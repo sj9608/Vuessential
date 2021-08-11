@@ -27,19 +27,16 @@ export default {
   methods: {
     addTodoItem() {
       if (this.newTodoItem !== "") {
-        let value = {
-          item: this.newTodoItem,
-          completed: false,
-          date: `${new Date().getMonth() + 1}/${new Date().getDate()}`,
-        };
-        localStorage.setItem(this.newTodoItem, JSON.stringify(value));
-        console.log(value);
+        // store action "addTodo" 실행, 
+        this.$store.commit("SET_TODO", this.newTodoItem);
         this.clearInput();
       }
+      else
+        alert("no!"); // [임시] 빈값일 때 alert.
     },
     clearInput() {
       this.newTodoItem = "";
-    }
+    },
   },
 };
 </script>

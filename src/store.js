@@ -10,15 +10,18 @@ export const store = createStore({
 
     mutations: {
         SET_TODO(state, payload) {
-            state.todos = [...state.todos, payload]
-            localStorage.setItem("todo", JSON.stringify(state.todos))
+            let value = {
+                item: payload,
+                completed: false,
+                date: `${new Date().getMonth() + 1}/${new Date().getDate()}`
+            };
+            state.todos = [...state.todos, payload];
+            localStorage.setItem(payload, JSON.stringify(value))
         }
     },
 
     actions: {
-        addTodo({commit}, payload) {
-            commit('SET_TODO', payload)
-        }
+        // 비동기 처리를 위해 이벤트를 발생시키는 함수를 만들어준다.
     },
 
     getters: {
