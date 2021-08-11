@@ -1,6 +1,8 @@
 <template>
     <header class="header">
-        <h1 class="logo">My Todo</h1>
+        <h1 class="logo">
+            <span class="blind">My Todo</span>
+        </h1>
         <p class="header__date">{{ timestamp }}</p>
     </header>
 </template>
