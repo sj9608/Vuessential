@@ -1,6 +1,10 @@
-# begin
-각 컴포넌트에 대한 설명
+# Vuessential
 
+Vue3 와 Vuex4 를 이용해 Todo app 개발하며 공부하기
+
+\+ SASS, Bootstrap v5
+
+### 각 컴포넌트에 대한 설명
 - header : 웹 앱 이름과 오늘 날짜를 표기
 - title : 몇개의 todo가 남았는지 표기
 - input : 할 일 입력하기
